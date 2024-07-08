@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>calculator</title>
+    <link rel="stylesheet" href="calculater.css" />
+    <script src="newtry.js"></script>
+
+    <body>
+      <div class="condainer">
+        <div class="calculator">
+          <input type="text" placeholder="0" id="inputext" />
+          <button onclick="clr()">C</button>
+          <button onclick="del()" id="del">Del</button>
+          <button onclick="calculate('%')">%</button>
+          <button onclick="calculate('/')">/</button>
+          <button id="no7" value="7" onclick="calculate(7)">7</button>
+          <button id="no8" value="8" onclick="calculate(8)">8</button>
+          <button id="no9" value="9" onclick="calculate(9)">9</button>
+          <button onclick="calculate('*')">*</button>
+          <button id="no4" value="4" onclick="calculate(4)">4</button>
+          <button id="no5" value="5" onclick="calculate(5)">5</button>
+          <button id="no6" value="6" onclick="calculate(6)">6</button>
+          <button onclick="calculate('-')">-</button>
+          <button id="no1" value="1" onclick="calculate(1)">1</button>
+          <button id="no2" value="2" onclick="calculate(2)">2</button>
+          <button id="no3" value="3" onclick="calculate(3)">3</button>
+          <button onclick="calculate('+')">+</button>
+          <button onclick="calculate('.')">.</button>
+          <button id="no3" value="0" onclick="calculate(0)">0</button>
+          <button onclick="calculate('(')">(</button>
+          <button onclick="calculate(')')">)</button>
+          <button onclick="Result()" id="equal">=</button>
+        </div>
+      </div>
+
+      <script>
+        let result = document.getElementById("inputext");
+        let calculate = (number) => {
+          result.value += number;
+        };
+        function del() {
+          result.value = result.value.slice(0, -1);
+        }
+        function clr() {
+          result.value = "";
+        }
+        let Result = () => {
+          try {
+            result.value = eval(result.value);
+          } catch (err) {
+            alert("Enter the valid input");
+          }
+        };
+      </script>
+    </body>
+  </head>
+</html>
