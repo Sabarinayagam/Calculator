@@ -85,6 +85,6 @@ button:hover{
 }
 @media (max-width: 374px) {
     .calculator{
-        transform: scale(2);
+        transform: scale(1.3);
     }
   }
