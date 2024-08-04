@@ -83,8 +83,8 @@ button:hover{
     background-color: yellow;
     box-shadow: none;
 }
-@media (max-width: 374px) {
+/* @media (max-width: 374px) {
     .calculator{
         transform: scale(1.3);
     }
-  }
+  } */
